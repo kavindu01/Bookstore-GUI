@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="faq.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="196x196" href="images/bookicon.png">
+
+  </head>
+    <body>
+        <div class="accordion">
+     <div class="image-box">
+     </div>
+     <div class="accordion-text">
+     <div class="title">FAQ</div>
+     <ul class="faq-text">
+      <li>
+        <div class="question-arrow">
+          <span class="question"> How long does it take for delivery within Australia ?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p> With the impact of COVID-19, the delivery estimations may vary depending on the state.
+            Usual domestic shipments are between 7-15 days. 
+        </p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question"> Can I check my order status online?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Yes , If you are signed in from your account, check the Orders section for your order status. </p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question"> I can't find the book I need . Do you order on behalf ?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p> We try our best to provide the required books by partnered publishers .
+            Any other type of publication should be requested via an email for us to send in. 
+        </p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question"> Are the Transactions safe ?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p> Yes , This site is hosted on a secure server. The sensitive bank and private details entered when purchasing are not being stored in our servers.
+        </p>
+        <span class="line"></span>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+
+  <script>
+    let li = document.querySelectorAll(".faq-text li");
+    for (var i = 0; i < li.length; i++) {
+      li[i].addEventListener("click", (e)=>{
+        let clickedLi;
+        if(e.target.classList.contains("question-arrow")){
+          clickedLi = e.target.parentElement;
+        }else{
+          clickedLi = e.target.parentElement.parentElement;
+        }
+       clickedLi.classList.toggle("showAnswer");
+      });
+    }
+  </script>
+
+</body>
+</html>
+
